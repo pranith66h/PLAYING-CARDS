@@ -1,0 +1,100 @@
+<DOCTYPE html<!>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Playing Cards</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 20px;
+      font-family: Arial, sans-serif;
+      background-color: #f0f0f0;
+      display: flex;
+      justify-content: center;
+      min-height: 100vh;
+    }
+
+    #playing-cards {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      max-width: 1200px;
+    }
+
+    .card {
+      width: 200px;
+      height: 280px;
+      background-color: white;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+      overflow: hidden;
+      display: flex;
+      justify-content: space-between;
+      padding: 10px;
+      box-sizing: border-box;
+      position: relative;
+    }
+
+    .left, .middle, .right {
+      display: flex;
+      align-items: center;
+      font-size: 2.5rem;
+      font-weight: bold;
+    }
+
+    .left {
+      align-self: flex-start;
+    }
+
+    .middle {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      font-size: 4rem;
+      line-height: 1;
+    }
+
+    .right {
+      align-self: flex-end;
+      transform: rotate(180deg);
+    }
+
+    /* Optional: Add some color for suits */
+    .hearts, .diamonds { color: red; }
+    .spades, .clubs { color: black; }
+  </style>
+</head>
+<body>
+  <main id="playing-cards">
+    <!-- Card 1: Ace of Spades -->
+    <div class="card">
+      <div class="left spades">A</div>
+      <div class="middle spades">♠</div>
+      <div class="right spades">A</div>
+    </div>
+
+    <!-- Card 2: Queen of Hearts -->
+    <div class="card">
+      <div class="left hearts">Q</div>
+      <div class="middle hearts">♥</div>
+      <div class="right hearts">Q</div>
+    </div>
+
+    <!-- Card 3: 10 of Clubs -->
+    <div class="card">
+      <div class="left clubs">10</div>
+      <div class="middle clubs">♣</div>
+      <div class="right clubs">10</div>
+    </div>
+
+    <!-- Optional 4th card (bonus - tests flex-wrap nicely) -->
+    <div class="card">
+      <div class="left diamonds">K</div>
+      <div class="middle diamonds">♦</div>
+      <div class="right diamonds">K</div>
+    </div>
+  </main>
+</body>
+</html>
